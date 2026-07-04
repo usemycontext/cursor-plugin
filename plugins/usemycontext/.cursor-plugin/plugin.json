@@ -1,0 +1,15 @@
+{
+  "name": "usemycontext",
+  "displayName": "UseMyContext",
+  "version": "1.0.0",
+  "description": "Your personal context, served to Cursor over MCP. Map each folder to one of your @handle profiles so every session in that folder reads the right context.",
+  "author": {
+    "name": "UseMyContext",
+    "url": "https://usemycontext.ai"
+  },
+  "homepage": "https://usemycontext.ai",
+  "repository": "https://github.com/usemycontext/cursor-plugin",
+  "license": "MIT",
+  "keywords": ["context", "mcp", "memory", "profile", "usemycontext", "personal-context"],
+  "logo": "assets/logo.png"
+}

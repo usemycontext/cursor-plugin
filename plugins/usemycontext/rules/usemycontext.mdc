@@ -1,0 +1,28 @@
+---
+description: How this folder connects to UseMyContext. Read the .umc marker and scope UseMyContext MCP reads to the mapped project.
+alwaysApply: true
+---
+
+# UseMyContext folder mapping
+
+UseMyContext (usemycontext.ai) hosts your personal context and serves it to Cursor over MCP. Each of
+your UseMyContext projects has its own context and its own `@handle`. A folder can be bound to one
+project with a `.umc` marker in the workspace root:
+
+```
+projectId=p2
+handle=@work
+```
+
+Apply this on every session:
+
+- If a `.umc` file exists in the workspace root, read its `projectId` (and optional `handle`). On every
+  UseMyContext MCP tool call (`profile`, `list_files`, `search_files`, `get_file`, `ask_docs`,
+  `query_table`, `suggest_update`), pass the argument `projectId="<the .umc projectId>"` so this session
+  reads the mapped project. The server verifies the id is one of your own projects before scoping the read.
+- This applies when your UseMyContext connection is account-wide. A single-project connection is already
+  scoped to one project and ignores the argument.
+- With no `.umc` marker, tool calls read your account's active profile. Do not guess a `projectId`.
+
+The boundary: this scopes your CONTEXT per folder, that is, which UseMyContext profile the AI reads. It
+does not change your Cursor account, your Cursor plan, your billing, or which model runs.

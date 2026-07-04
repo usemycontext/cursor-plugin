@@ -1,0 +1,18 @@
+{
+  "name": "usemycontext",
+  "owner": {
+    "name": "UseMyContext",
+    "url": "https://usemycontext.ai"
+  },
+  "metadata": {
+    "description": "The UseMyContext plugin for Cursor - your context follows you into your editor.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "usemycontext",
+      "source": "./plugins/usemycontext",
+      "description": "Read your UseMyContext profile in Cursor over MCP, and map each folder to the right context."
+    }
+  ]
+}
