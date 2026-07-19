@@ -1,6 +1,6 @@
 # UseMyContext plugin marketplace for Cursor
 
-Your context follows you into your editor. This repository is a Cursor plugin marketplace that distributes
+Your personal context layer for AI follows you into your editor. This repository is a Cursor plugin marketplace that distributes
 the **UseMyContext** plugin: sign in once and Cursor reads your UseMyContext profile, lists and opens your
 files, and answers from your documents, all read-only and audited. Map a folder to one of your projects and
 every session in that folder reads the right context.
