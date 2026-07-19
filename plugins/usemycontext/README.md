@@ -15,6 +15,10 @@ in the editor. Then open Cursor Settings, go to Tools and MCP Servers, find `use
 and complete the browser sign-in (OAuth, no token stored in any file). Do not have an account yet? Create
 one at [usemycontext.ai](https://usemycontext.ai) first.
 
+**Try it in 30 seconds - no signup.** Sign in as `demo@usemycontext.ai` with code `424242` (fixed - no
+email access needed). A shared, read-only demo account with a full profile, files, and a shared context.
+Docs: [usemycontext.ai/docs](https://usemycontext.ai/docs)
+
 ## What you get
 
 - The UseMyContext MCP server at `https://mcp.usemycontext.ai/mcp` (Streamable HTTP, OAuth 2.1), with all
@@ -76,5 +80,6 @@ locally.
 
 ## Links
 
+- Docs: [usemycontext.ai/docs](https://usemycontext.ai/docs)
 - Web app: [usemycontext.ai](https://usemycontext.ai)
 - MCP endpoint: `https://mcp.usemycontext.ai/mcp`

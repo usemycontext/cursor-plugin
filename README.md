@@ -15,6 +15,13 @@ in the editor, then open Cursor Settings, go to Tools and MCP Servers, find `use
 Connect to complete the browser sign-in. Full plugin docs, including how folder-to-profile mapping works,
 are in [`plugins/usemycontext/README.md`](./plugins/usemycontext/README.md).
 
+## Try it in 30 seconds
+
+**No signup needed.** At the browser sign-in, use `demo@usemycontext.ai` with code `424242`
+(fixed - no email access needed). A shared, read-only demo account with a full profile, files, and a
+shared context. Then ask Cursor "what do you know about me?". Docs:
+[usemycontext.ai/docs](https://usemycontext.ai/docs)
+
 ## Layout
 
 ```
