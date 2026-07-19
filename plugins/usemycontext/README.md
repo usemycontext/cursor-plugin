@@ -1,7 +1,8 @@
 # UseMyContext for Cursor
 
 Your personal context layer for AI, served to Cursor over MCP. Sign in once and Cursor can read your
-UseMyContext profile, list and open your files, and answer from your documents, all read-only and audited.
+UseMyContext profile, list and open your files, and answer from your documents, all read-only against your
+files and audited.
 
 Map a folder to one of your projects, and every Cursor session in that folder reads the right context: a
 work repo reads your work profile, a side project reads your personal one.
@@ -22,6 +23,10 @@ one at [usemycontext.ai](https://usemycontext.ai) first.
 - A `/umc` skill to check, set, or change which UseMyContext profile a folder reads.
 - An always-on rule plus a sessionStart hook that read a folder's `.umc` marker so a new session is
   already pointed at the right project.
+
+One tool, `suggest_update`, can write: it files a pending suggestion that you review and approve in the
+web app. Nothing the AI does ever edits your profile or your files directly, and every read is logged to
+your audit trail.
 
 ## Folder to profile mapping
 
@@ -50,10 +55,24 @@ Two supported ways, both work today:
    app. Every tool is then scoped to that one project automatically, no marker needed. To vary the project
    per folder this way, add the MCP server at project scope and authenticate each repo to its project.
 
-## The boundary
+## Disconnecting and revoking
 
-This plugin scopes your CONTEXT per folder, that is, which UseMyContext profile the AI reads. It does not
-change your Cursor account, your Cursor plan, your billing, or which model runs.
+- In Cursor, open Cursor Settings, go to Tools and MCP Servers, and disconnect `usemycontext`.
+- Or revoke from the UseMyContext web app: the Connect page lists every AI connected right now, each with
+  its own Disconnect button, plus a "Disconnect all".
+
+Revoking is enforced on the server: the token dies immediately, everywhere. Nothing needs cleaning up
+locally.
+
+## What it can and cannot do
+
+- Reads: your profile and the files you uploaded to UseMyContext, scoped to the connected or mapped
+  project.
+- Writes: nothing to your files. The one write tool, `suggest_update`, files a pending suggestion that
+  you review and approve in the web app.
+- Every read is logged to your audit trail.
+- You can revoke access at any time, from Cursor Settings or from the web app's Connect page.
+- It does not change your Cursor account, your Cursor plan, your billing, or which model runs.
 
 ## Links
 

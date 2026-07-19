@@ -2,8 +2,10 @@
 
 Your personal context layer for AI follows you into your editor. This repository is a Cursor plugin marketplace that distributes
 the **UseMyContext** plugin: sign in once and Cursor reads your UseMyContext profile, lists and opens your
-files, and answers from your documents, all read-only and audited. Map a folder to one of your projects and
-every session in that folder reads the right context.
+files, and answers from your documents, all read-only against your files and audited. One tool,
+`suggest_update`, can write: it files a pending suggestion that you review and approve in the web app.
+Nothing the AI does ever edits your profile or your files directly, and every read is logged to your audit
+trail. Map a folder to one of your projects and every session in that folder reads the right context.
 
 ## Install
 
@@ -35,31 +37,30 @@ are in [`plugins/usemycontext/README.md`](./plugins/usemycontext/README.md).
         `-- README.md               # plugin documentation
 ```
 
-## The boundary
+## What it can and cannot do
 
-This plugin scopes your CONTEXT per folder, that is, which UseMyContext profile the AI reads. It does not
-change your Cursor account, your Cursor plan, your billing, or which model runs.
+- Reads: your profile and the files you uploaded to UseMyContext, scoped to the connected or mapped
+  project.
+- Writes: nothing to your files. The one write tool, `suggest_update`, files a pending suggestion that you
+  review and approve in the web app.
+- Every read is logged to your audit trail.
+- You can revoke access at any time: disconnect `usemycontext` under Cursor Settings, Tools and MCP
+  Servers, or revoke from the Connect page in the UseMyContext web app. Revoking is enforced on the
+  server: the token dies immediately, everywhere.
+- It does not change your Cursor account, your Cursor plan, your billing, or which model runs.
 
-## For maintainers: publishing and submission
+## Publishing
 
-This directory is the full contents of the public marketplace repository. Cursor plugins are distributed as
-Git repositories and every plugin is manually reviewed by the Cursor team before it is listed. To publish:
+Cursor plugins are distributed as Git repositories and every plugin is manually reviewed by the Cursor
+team before it is listed. Before committing a change, validate the format:
 
-1. Copy the contents of this directory to the root of a public Git repository (for example
-   `usemycontext/cursor-plugin`), so `.cursor-plugin/marketplace.json` sits at the repo root and
-   `plugins/usemycontext/` is the plugin directory.
-2. Validate the format before you commit:
+```
+node scripts/validate.mjs
+```
 
-   ```
-   node scripts/validate.mjs
-   ```
-
-   Fix every reported error. This checks the manifests parse, the plugin name is lowercase kebab-case, the
-   marketplace entry maps to a real folder, referenced paths (logo, hooks, mcp) resolve, and skill and rule
-   files carry their required frontmatter.
-3. Push to the default branch, then submit the repository link to the Cursor team (via Slack or
-   `kniparko@anysphere.com`) for review and listing.
-
-Bump `version` in `plugins/usemycontext/.cursor-plugin/plugin.json` on every release. Nothing here deploys a
-worker or a Pages site; the plugin only needs this public repository to exist. The live UseMyContext service
-it connects to is at [usemycontext.ai](https://usemycontext.ai).
+Fix every reported error. This checks the manifests parse, the plugin name is lowercase kebab-case, the
+marketplace entry maps to a real folder, referenced paths (logo, hooks, mcp) resolve, and skill and rule
+files carry their required frontmatter. Bump `version` in `plugins/usemycontext/.cursor-plugin/plugin.json`
+on every release. Nothing here deploys a worker or a Pages site; the plugin only needs this public
+repository to exist. The live UseMyContext service it connects to is at
+[usemycontext.ai](https://usemycontext.ai).
