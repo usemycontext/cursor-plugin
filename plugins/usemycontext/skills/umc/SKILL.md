@@ -50,9 +50,10 @@ There are two supported ways to make a folder read a specific project. Both work
 You sign in to UseMyContext once, with an account-wide grant (the default). A `.umc` marker in a folder
 then selects the project for that folder:
 
-- On every UseMyContext MCP tool call, include the argument `projectId="<the .umc projectId>"`. The tools
-  are `profile`, `list_files`, `search_files`, `get_file`, `ask_docs`, `query_table`, and `suggest_update`
-  (in Cursor they appear under the `usemycontext` MCP server).
+- On every UseMyContext MCP tool call, include the argument `projectId="<the .umc projectId>"`. The
+  project-scoped tools are `profile`, `list_files`, `search_files`, `search`, `get_file`, `fetch`,
+  `ask_docs`, `query_table`, and `suggest_update` (`search` and `fetch` are thin aliases of
+  `search_files` and `get_file`; in Cursor they appear under the `usemycontext` MCP server).
 - The UseMyContext server verifies the `projectId` is one of your own projects and scopes the read to it.
   If the `projectId` is not yours it refuses; if it is missing it falls back to your active project.
 - The plugin's always-on rule and its sessionStart hook read `.umc` and remind the session of this rule

@@ -17,9 +17,10 @@ handle=@work
 Apply this on every session:
 
 - If a `.umc` file exists in the workspace root, read its `projectId` (and optional `handle`). On every
-  UseMyContext MCP tool call (`profile`, `list_files`, `search_files`, `get_file`, `ask_docs`,
-  `query_table`, `suggest_update`), pass the argument `projectId="<the .umc projectId>"` so this session
-  reads the mapped project. The server verifies the id is one of your own projects before scoping the read.
+  UseMyContext MCP tool call (`profile`, `list_files`, `search_files`, `search`, `get_file`, `fetch`,
+  `ask_docs`, `query_table`, `suggest_update` - `search` and `fetch` are thin aliases of `search_files`
+  and `get_file`), pass the argument `projectId="<the .umc projectId>"` so this session reads the mapped
+  project. The server verifies the id is one of your own projects before scoping the read.
 - This applies when your UseMyContext connection is account-wide. A single-project connection is already
   scoped to one project and ignores the argument.
 - With no `.umc` marker, tool calls read your account's active profile. Do not guess a `projectId`.

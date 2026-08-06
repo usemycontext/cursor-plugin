@@ -55,10 +55,11 @@ The `/umc` skill checks or changes a folder's mapping.
 
 ## Boundary
 
-- Eight MCP tools, all read-only against the user's files.
+- The MCP tools are all read-only against the user's files (`search` and `fetch` are thin
+  aliases of `search_files` and `get_file`, added for ChatGPT deep-research compatibility).
 - One tool, `suggest_update`, can write: it files a pending suggestion that the user reviews and
   approves in the web app. Nothing the AI does ever edits the profile or files directly.
-- Every read is logged to the user's audit trail.
+- Every access leaves a record in the user's audit trail.
 - Revoke any time: disconnect under Cursor Settings, Tools and MCP Servers, or the Connect page in
   the web app (server-enforced, immediate).
 - The plugin never uploads repo code or files; only the local `.umc` marker is read.

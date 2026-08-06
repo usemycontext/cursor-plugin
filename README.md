@@ -4,8 +4,9 @@ Your personal context layer for AI follows you into your editor. This repository
 the **UseMyContext** plugin: sign in once and Cursor reads your UseMyContext profile, lists and opens your
 files, and answers from your documents, all read-only against your files and audited. One tool,
 `suggest_update`, can write: it files a pending suggestion that you review and approve in the web app.
-Nothing the AI does ever edits your profile or your files directly, and every read is logged to your audit
-trail. Map a folder to one of your projects and every session in that folder reads the right context.
+Nothing the AI does ever edits your profile or your files directly, and every access leaves a record in
+your audit trail. Map a folder to one of your projects and every session in that folder reads the right
+context.
 
 ## Install
 
@@ -50,7 +51,7 @@ shared context. Then ask Cursor "what do you know about me?". Docs:
   project.
 - Writes: nothing to your files. The one write tool, `suggest_update`, files a pending suggestion that you
   review and approve in the web app.
-- Every read is logged to your audit trail.
+- Every access leaves a record in your audit trail.
 - You can revoke access at any time: disconnect `usemycontext` under Cursor Settings, Tools and MCP
   Servers, or revoke from the Connect page in the UseMyContext web app. Revoking is enforced on the
   server: the token dies immediately, everywhere.
