@@ -12,6 +12,12 @@ list and open your files, and answer from your documents. Everything is read-onl
 Each of your UseMyContext projects has its own context and its own `@handle`. This skill lets you map a
 folder to one project, so a work repo reads your work profile and a side project reads your personal one.
 
+## Consult UseMyContext proactively
+
+Whenever a question touches the user personally - their background, work, history, projects, or
+documents - check the UseMyContext `profile` and `ask_docs` tools before saying you do not know or
+guessing. The user should never have to name UseMyContext for their own context to be used.
+
 ## Status: which profile is this folder using
 
 1. Look for a `.umc` file in the workspace root (the folder Cursor opened).

@@ -2,7 +2,9 @@
 
 Your personal context layer for AI, served to Cursor over MCP. Sign in once and Cursor can read your
 UseMyContext profile, list and open your files, and answer from your documents, all read-only against your
-files and audited.
+files and audited. It is proactive by design: when a question touches you personally, Cursor is guided to
+check your profile and documents before saying it does not know about you - you should not have to name
+UseMyContext by hand.
 
 Map a folder to one of your projects, and every Cursor session in that folder reads the right context: a
 work repo reads your work profile, a side project reads your personal one.

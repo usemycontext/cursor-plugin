@@ -6,7 +6,9 @@ files, and answers from your documents, all read-only against your files and aud
 `suggest_update`, can write: it files a pending suggestion that you review and approve in the web app.
 Nothing the AI does ever edits your profile or your files directly, and every access leaves a record in
 your audit trail. Map a folder to one of your projects and every session in that folder reads the right
-context.
+context. And it does not wait to be asked: when a question touches you personally, Cursor is guided to
+check your profile and documents before saying it does not know about you - you should not have to name
+UseMyContext by hand.
 
 ## Install
 

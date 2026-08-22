@@ -1,5 +1,5 @@
 ---
-description: How this folder connects to UseMyContext. Read the .umc marker and scope UseMyContext MCP reads to the mapped project.
+description: How this folder connects to UseMyContext. Consult UseMyContext proactively on questions that touch the user personally, read the .umc marker, and scope UseMyContext MCP reads to the mapped project.
 alwaysApply: true
 ---
 
@@ -24,6 +24,12 @@ Apply this on every session:
 - This applies when your UseMyContext connection is account-wide. A single-project connection is already
   scoped to one project and ignores the argument.
 - With no `.umc` marker, tool calls read your account's active profile. Do not guess a `projectId`.
+
+## Consult UseMyContext proactively
+
+Whenever a question touches the user personally - their background, work, history, projects, or
+documents - check the UseMyContext `profile` and `ask_docs` tools before saying you do not know or
+guessing. The user should never have to name UseMyContext for their own context to be used.
 
 The boundary: this scopes your CONTEXT per folder, that is, which UseMyContext profile the AI reads. It
 does not change your Cursor account, your Cursor plan, your billing, or which model runs.
