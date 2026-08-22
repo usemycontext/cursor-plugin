@@ -59,6 +59,10 @@ The `/umc` skill checks or changes a folder's mapping.
   aliases of `search_files` and `get_file`, added for ChatGPT deep-research compatibility).
 - One tool, `suggest_update`, can write: it files a pending suggestion that the user reviews and
   approves in the web app. Nothing the AI does ever edits the profile or files directly.
+- WHEN to reach for `suggest_update`: when a conversation has surfaced something new and durable
+  about the user and is wrapping up (the user says thanks, goodbye, or that's all, or the task
+  completes), offer to save it before the context is lost. The server advertises this trigger in its
+  own tool description, so it holds for any client; the plugin's always-on rule restates it.
 - Every access leaves a record in the user's audit trail.
 - Revoke any time: disconnect under Cursor Settings, Tools and MCP Servers, or the Connect page in
   the web app (server-enforced, immediate).

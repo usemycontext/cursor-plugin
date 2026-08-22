@@ -1,7 +1,7 @@
 {
   "name": "usemycontext",
   "displayName": "UseMyContext",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Your personal context layer for AI, served to Cursor over MCP. Map each folder to one of your @handle profiles so every session in that folder reads the right context.",
   "author": {
     "name": "UseMyContext",

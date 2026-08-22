@@ -33,7 +33,10 @@ Docs: [usemycontext.ai/docs](https://usemycontext.ai/docs)
 
 One tool, `suggest_update`, can write: it files a pending suggestion that you review and approve in the
 web app. Nothing the AI does ever edits your profile or your files directly, and every access leaves a
-record in your audit trail.
+record in your audit trail. When a conversation is wrapping up having surfaced something new and durable
+about you, Cursor is guided to offer that save before the context is lost - so the loop closes at both
+ends: your context is read at the start of a session, and what the session taught is offered back at the
+end.
 
 ## Folder to profile mapping
 

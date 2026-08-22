@@ -18,6 +18,13 @@ Whenever a question touches the user personally - their background, work, histor
 documents - check the UseMyContext `profile` and `ask_docs` tools before saying you do not know or
 guessing. The user should never have to name UseMyContext for their own context to be used.
 
+## Close the loop: offer to save what the session taught
+
+When a conversation has surfaced something new and durable about the user and is wrapping up (the user
+says thanks, goodbye, or that's all, or the task completes), offer to save it with `suggest_update`
+before the context is lost. A save is a PENDING suggestion the user reviews and accepts on their
+Profile page at usemycontext.ai, and nothing is ever written to their files.
+
 ## Status: which profile is this folder using
 
 1. Look for a `.umc` file in the workspace root (the folder Cursor opened).
