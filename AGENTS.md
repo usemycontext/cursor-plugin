@@ -49,6 +49,10 @@ projectId=p2
 handle=@work
 ```
 
+A `projectId` may only be letters, digits, `_` and `-`, up to 32 characters, and a `handle` only `@`
+followed by letters, digits and `-`, up to 40. Anything else and the whole marker is ignored, so a
+repository you did not write cannot use one to talk to your assistant.
+
 `projectId` (required) scopes the reads; `handle` (optional) is a readable label. Both are shown in
 the web app on the project's page. No `.umc` means the folder reads the account's active profile.
 The `/umc` skill checks or changes a folder's mapping.

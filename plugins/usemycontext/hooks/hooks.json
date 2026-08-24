@@ -2,7 +2,7 @@
   "hooks": {
     "sessionStart": [
       {
-        "command": "./scripts/umc-session.sh"
+        "command": "sh -c 'd=$(pwd -P); w=$(cd \"${CURSOR_PROJECT_DIR:-/nonexistent-umc}\" 2>/dev/null && pwd -P); while [ \"$w\" != \"${w%/}\" ]; do w=${w%/}; done; p=; case \"$d/\" in \"$w\"/*) ;; *) p=\"$d/scripts/umc-session.sh\" ;; esac; if [ -n \"$p\" ] && [ ! -h \"$p\" ] && [ -f \"$p\" ]; then exec sh \"$p\"; fi; echo {}'"
       }
     ]
   }

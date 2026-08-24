@@ -29,7 +29,10 @@ Docs: [usemycontext.ai/docs](https://usemycontext.ai/docs)
   `ask_docs`, `query_table`, `suggest_update`, `shared_context`.
 - A `/umc` skill to check, set, or change which UseMyContext profile a folder reads.
 - An always-on rule plus a sessionStart hook that read a folder's `.umc` marker so a new session is
-  already pointed at the right project.
+  already pointed at the right project. The hook refuses to run any script that resolves inside
+  `CURSOR_PROJECT_DIR`, so a repository you opened cannot substitute its own, and it refuses outright if
+  Cursor does not tell it where the workspace is. If the mapping line does not appear in a session, the
+  always-on rule still carries it, and the `/umc` skill reports the mapping on request.
 
 One tool, `suggest_update`, can write: it files a pending suggestion that you review and approve in the
 web app. Nothing the AI does ever edits your profile or your files directly, and every access leaves a
@@ -47,6 +50,10 @@ Each UseMyContext project has its own context and its own `@handle`. To bind a f
 projectId=p2
 handle=@work
 ```
+
+A `projectId` may only be letters, digits, `_` and `-`, up to 32 characters, and a `handle` only `@`
+followed by letters, digits and `-`, up to 40. Anything else and the whole marker is ignored, so a
+repository you did not write cannot use one to talk to your assistant.
 
 `projectId` (like `p2`) is what scopes the reads. `handle` is an optional readable label. Find both in the
 UseMyContext web app on the project's page. The `/umc` skill can create or update this file for you.

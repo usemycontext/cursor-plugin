@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "The UseMyContext plugin for Cursor - your personal context layer for AI follows you into your editor.",
-    "version": "1.0.7"
+    "version": "1.0.8"
   },
   "plugins": [
     {
