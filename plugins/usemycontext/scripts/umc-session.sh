@@ -20,16 +20,16 @@
 
 emit_empty() { printf '{}\n'; exit 0; }
 
-# --- BEGIN shared .umc marker validator (USE-583) ---------------------------
+# --- BEGIN shared .umc marker validator -------------------------------------
 # This block is BYTE-IDENTICAL in all three shell plugin trees:
 #   antigravity-plugin/usemycontext/scripts/umc-session.sh
 #   claude-code-plugin/usemycontext/scripts/umc-session.sh
 #   cursor-plugin/plugins/usemycontext/scripts/umc-session.sh
 # and it enforces the SAME rules as its JS twin, validatedMarker() in
 # opencode-plugin/index.js. The trees ship as separate public repositories and
-# cannot import a shared file, so test/plugin-marker-validation-use583 pins the
-# rules on both sides, drives ONE corpus through both, and fails the moment
-# either spelling drifts.
+# cannot import a shared file, so a shared regression suite pins the rules on
+# both sides, drives ONE corpus through both, and fails the moment either
+# spelling drifts.
 #
 # Why it exists: a ".umc" marker is attacker-controlled the moment you clone
 # somebody else's repository, and our own docs suggest committing one. Its
@@ -110,9 +110,9 @@ umc_marker_load() {
   umc_marker_project_id="$umc_pid"
   umc_marker_handle="$umc_hnd"
 }
-# --- END shared .umc marker validator (USE-583) -----------------------------
+# --- END shared .umc marker validator ---------------------------------------
 
-# --- BEGIN shared JSON string emit (USE-583) --------------------------------
+# --- BEGIN shared JSON string emit ------------------------------------------
 # BYTE-IDENTICAL in the two shell plugin trees whose host reads JSON back:
 #   antigravity-plugin/usemycontext/scripts/umc-session.sh
 #   cursor-plugin/plugins/usemycontext/scripts/umc-session.sh
@@ -133,7 +133,7 @@ umc_json_string() {
     | cut -c1-3900 \
     | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'
 }
-# --- END shared JSON string emit (USE-583) ----------------------------------
+# --- END shared JSON string emit --------------------------------------------
 
 umc_marker_load "${CURSOR_PROJECT_DIR:-.}"
 
