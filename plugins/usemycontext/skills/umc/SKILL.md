@@ -1,13 +1,14 @@
 ---
 name: umc
-description: Manage how this folder connects to UseMyContext. Use when the user wants to check which UseMyContext profile the current folder is reading, map this folder to one of their @handle profiles, or change or remove that mapping. Also use to explain how the folder-to-profile mapping works.
+description: Manage how this folder connects to UseMyContext. Use when the user wants to check which UseMyContext profile the current folder is reading, map this folder to one of their projects (each has its own @handle), or change or remove that mapping. Also use to explain how the folder-to-profile mapping works.
 ---
 
 # UseMyContext in Cursor
 
 UseMyContext (usemycontext.ai) hosts your personal context and serves it to any AI client over MCP.
 This plugin registers the UseMyContext MCP server, so once you sign in, Cursor can read your profile,
-list and open your files, and answer from your documents. Everything is read-only and audited.
+list and open your files, and answer from your documents. Everything is read-only against your data
+and audited.
 
 Each of your UseMyContext projects has its own context and its own `@handle`. This skill lets you map a
 folder to one project, so a work repo reads your work profile and a side project reads your personal one.

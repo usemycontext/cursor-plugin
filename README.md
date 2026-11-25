@@ -1,11 +1,11 @@
 # UseMyContext plugin marketplace for Cursor
 
-Your personal context layer for AI follows you into your editor. This repository is a Cursor plugin marketplace that distributes
+One context. Every AI app. Now in your editor. This repository is a Cursor plugin marketplace that distributes
 the **UseMyContext** plugin: sign in once and Cursor reads your UseMyContext profile, lists and opens your
 files, and answers from your documents, all read-only against your files and audited. One tool,
-`suggest_update`, can write: it files a pending suggestion that you review and approve in the web app.
-Nothing the AI does ever edits your profile or your files directly, and every access leaves a record in
-your audit trail. Map a folder to one of your projects and every session in that folder reads the right
+`suggest_update`, can write. Your answers to the first setup questions save straight to your profile;
+everything else waits for your approval in the web app. Nothing the AI does ever touches your files, and
+every access leaves a record in your audit trail. Map a folder to one of your projects and every session in that folder reads the right
 context. And it does not wait to be asked, at either end of a session: when a question touches you
 personally, Cursor is guided to check your profile and documents before saying it does not know about
 you, and when a conversation is wrapping up having taught it something durable about you, it is guided
@@ -13,10 +13,10 @@ to offer to save that before the context is lost. You should not have to name Us
 
 ## Install
 
-Once this plugin is listed in Cursor's marketplace, add it from
-[cursor.com/marketplace](https://cursor.com/marketplace) (the "Add to Cursor" button) or with `/add-plugin`
-in the editor, then open Cursor Settings, go to Tools and MCP Servers, find `usemycontext`, and click
-Connect to complete the browser sign-in. Full plugin docs, including how folder-to-profile mapping works,
+This plugin is not in Cursor's marketplace yet. Until it is, use the **Add to Cursor** button on the
+Connect page at [usemycontext.ai](https://usemycontext.ai), or add `https://mcp.usemycontext.ai/mcp` to
+`~/.cursor/mcp.json`. Then open Cursor Settings, go to Tools and MCP Servers, find `usemycontext`, and
+click Connect to complete the browser sign-in. Full plugin docs, including how folder-to-profile mapping works,
 are in [`plugins/usemycontext/README.md`](./plugins/usemycontext/README.md).
 
 ## Try it in 30 seconds
@@ -52,8 +52,8 @@ shared context. Then ask Cursor "what do you know about me?". Docs:
 
 - Reads: your profile and the files you uploaded to UseMyContext, scoped to the connected or mapped
   project.
-- Writes: nothing to your files. The one write tool, `suggest_update`, files a pending suggestion that you
-  review and approve in the web app.
+- Writes: nothing to your files. The one write tool, `suggest_update`, saves your answers to the first
+  setup questions straight to your profile; everything else waits for your approval in the web app.
 - Every access leaves a record in your audit trail.
 - You can revoke access at any time: disconnect `usemycontext` under Cursor Settings, Tools and MCP
   Servers, or revoke from the Connect page in the UseMyContext web app. Revoking is enforced on the

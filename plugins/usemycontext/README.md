@@ -1,6 +1,6 @@
 # UseMyContext for Cursor
 
-Your personal context layer for AI, served to Cursor over MCP. Sign in once and Cursor can read your
+One context, every AI app: your UseMyContext context, served to Cursor over MCP. Sign in once and Cursor can read your
 UseMyContext profile, list and open your files, and answer from your documents, all read-only against your
 files and audited. It is proactive by design: when a question touches you personally, Cursor is guided to
 check your profile and documents before saying it does not know about you - you should not have to name
@@ -11,9 +11,9 @@ work repo reads your work profile, a side project reads your personal one.
 
 ## Install
 
-Once this plugin is listed in Cursor's marketplace, add it from
-[cursor.com/marketplace](https://cursor.com/marketplace) (the "Add to Cursor" button) or with `/add-plugin`
-in the editor. Then open Cursor Settings, go to Tools and MCP Servers, find `usemycontext`, click Connect,
+This plugin is not in Cursor's marketplace yet. Until it is, use the **Add to Cursor** button on the
+Connect page at [usemycontext.ai](https://usemycontext.ai), or add `https://mcp.usemycontext.ai/mcp` to
+`~/.cursor/mcp.json`. Then open Cursor Settings, go to Tools and MCP Servers, find `usemycontext`, click Connect,
 and complete the browser sign-in (OAuth, no token stored in any file). Do not have an account yet? Create
 one at [usemycontext.ai](https://usemycontext.ai) first.
 
@@ -34,9 +34,9 @@ Docs: [usemycontext.ai/docs](https://usemycontext.ai/docs)
   Cursor does not tell it where the workspace is. If the mapping line does not appear in a session, the
   always-on rule still carries it, and the `/umc` skill reports the mapping on request.
 
-One tool, `suggest_update`, can write: it files a pending suggestion that you review and approve in the
-web app. Nothing the AI does ever edits your profile or your files directly, and every access leaves a
-record in your audit trail. When a conversation is wrapping up having surfaced something new and durable
+One tool, `suggest_update`, can write. Your answers to the first setup questions save straight to your
+profile; everything else waits for your approval in the web app. Nothing the AI does ever touches your
+files, and every access leaves a record in your audit trail. When a conversation is wrapping up having surfaced something new and durable
 about you, Cursor is guided to offer that save before the context is lost - so the loop closes at both
 ends: your context is read at the start of a session, and what the session taught is offered back at the
 end.
@@ -85,8 +85,8 @@ locally.
 
 - Reads: your profile and the files you uploaded to UseMyContext, scoped to the connected or mapped
   project.
-- Writes: nothing to your files. The one write tool, `suggest_update`, files a pending suggestion that
-  you review and approve in the web app.
+- Writes: nothing to your files. The one write tool, `suggest_update`, saves your answers to the first
+  setup questions straight to your profile; everything else waits for your approval in the web app.
 - Every access leaves a record in your audit trail.
 - You can revoke access at any time, from Cursor Settings or from the web app's Connect page.
 - It does not change your Cursor account, your Cursor plan, your billing, or which model runs.
