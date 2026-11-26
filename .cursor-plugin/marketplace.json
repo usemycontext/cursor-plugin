@@ -5,8 +5,8 @@
     "url": "https://usemycontext.ai"
   },
   "metadata": {
-    "description": "The UseMyContext plugin for Cursor - one context, every AI app, now in your editor.",
-    "version": "1.0.10"
+    "description": "The UseMyContext plugin for Cursor - own your context, for every AI app, now in your editor.",
+    "version": "1.0.11"
   },
   "plugins": [
     {

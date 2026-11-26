@@ -1,6 +1,6 @@
 # UseMyContext plugin marketplace for Cursor
 
-One context. Every AI app. Now in your editor. This repository is a Cursor plugin marketplace that distributes
+Own your context, for every AI app. Now in your editor. This repository is a Cursor plugin marketplace that distributes
 the **UseMyContext** plugin: sign in once and Cursor reads your UseMyContext profile, lists and opens your
 files, and answers from your documents, all read-only against your files and audited. One tool,
 `suggest_update`, can write. Your answers to the first setup questions save straight to your profile;

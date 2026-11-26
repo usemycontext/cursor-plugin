@@ -1,8 +1,8 @@
 {
   "name": "usemycontext",
   "displayName": "UseMyContext",
-  "version": "1.0.10",
-  "description": "One context, every AI app, served to Cursor over MCP. Map each folder to one of your projects (each has its own @handle) so every session in that folder reads the right context.",
+  "version": "1.0.11",
+  "description": "Own your context, for every AI app, served to Cursor over MCP. Map each folder to one of your projects (each has its own @handle) so every session in that folder reads the right context.",
   "author": {
     "name": "UseMyContext",
     "url": "https://usemycontext.ai"

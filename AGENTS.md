@@ -4,7 +4,7 @@ Machine-first notes for coding agents. Human docs: README.md.
 
 ## What this is
 
-UseMyContext (usemycontext.ai) is one context for every AI app: a user-owned profile, uploaded
+UseMyContext (usemycontext.ai) lets you own your context, for every AI app: a user-owned profile, uploaded
 files and calendar, served to any MCP client from the remote server `https://mcp.usemycontext.ai/mcp`
 (Streamable HTTP, OAuth 2.1). This repo is a Cursor plugin marketplace distributing the
 `usemycontext` plugin (`plugins/usemycontext/`).
